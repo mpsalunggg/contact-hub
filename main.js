@@ -1,23 +1,25 @@
 import {
   closeAddContact,
-  modalAddContact,
+  modalContact,
   saveContact,
   showAddContact,
 } from './src/dom/button'
-import { addContact } from './src/main/addContact'
+import addContact from './src/features/addContact'
+import showContact from './src/features/showContact'
 
 document.addEventListener('DOMContentLoaded', function () {
+  showContact()
   showAddContact.addEventListener('click', () => {
-    modalAddContact.classList.remove('hidden')
+    modalContact.classList.remove('hidden')
   })
 
   closeAddContact.addEventListener('click', () => {
-    modalAddContact.classList.add('hidden')
+    modalContact.classList.add('hidden')
   })
 
-  modalAddContact.addEventListener('click', (event) => {
-    if (event.target === modalAddContact) {
-      modalAddContact.classList.add('hidden')
+  modalContact.addEventListener('click', (event) => {
+    if (event.target === modalContact) {
+      modalContact.classList.add('hidden')
     }
   })
 
