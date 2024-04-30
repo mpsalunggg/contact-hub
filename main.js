@@ -1,19 +1,27 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const modalAddContact = document.getElementById('modal-add-contact')
-  const closeAddContact = document.getElementById('close-add-contact')
-  const showAddContact = document.getElementById('show-add-contact')
+import {
+  closeAddContact,
+  modalAddContact,
+  saveContact,
+  showAddContact,
+} from './src/dom/button'
+import { addContact } from './src/main/addContact'
 
-  showAddContact.addEventListener('click', function () {
+document.addEventListener('DOMContentLoaded', function () {
+  showAddContact.addEventListener('click', () => {
     modalAddContact.classList.remove('hidden')
   })
 
-  closeAddContact.addEventListener('click', function () {
+  closeAddContact.addEventListener('click', () => {
     modalAddContact.classList.add('hidden')
   })
 
-  modalAddContact.addEventListener('click', function (event) {
+  modalAddContact.addEventListener('click', (event) => {
     if (event.target === modalAddContact) {
       modalAddContact.classList.add('hidden')
     }
+  })
+
+  saveContact.addEventListener('click', () => {
+    addContact()
   })
 })
