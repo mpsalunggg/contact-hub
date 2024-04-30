@@ -5,9 +5,9 @@ Contact Hub is a simple contact management application designed to help users or
 
 ## Features
 
-- **Add Contacts**: Easily add new contacts to your list.
-- **Edit Contacts**: Update contact details as needed.
-- **Delete Contacts**: Remove unnecessary contacts from your list.
+- [ ] **Add Contacts**: Easily add new contacts to your list.
+- [ ] **Edit Contacts**: Update contact details as needed.
+- [ ] **Delete Contacts**: Remove unnecessary contacts from your list.
 
 ## Technologies Used
 
